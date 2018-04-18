@@ -3,7 +3,6 @@ package com.journal.model;
 Aleksandr Kuzmenko
  */
 public class Student {
-
     private long id;
     private String firstName;
     private String lastName;
