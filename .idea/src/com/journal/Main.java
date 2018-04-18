@@ -1,4 +1,4 @@
-package com.journal.modal;
+package com.journal;
 
 public class Main {
     public static void main(String[] args) {
