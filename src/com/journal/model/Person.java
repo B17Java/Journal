@@ -1,6 +1,8 @@
 package com.journal.model;
 
+
 public abstract class Person {
+
     private int id;
     private String firstName;
     private String lastName;
@@ -10,10 +12,13 @@ public abstract class Person {
     private String phone;
     private String nikGit;
 
-    Person(String firstName, String lastName){
+
+    public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
+
 
     public int getId() {
         return id;
@@ -69,6 +74,11 @@ public abstract class Person {
 
     public void setNikGit(String nikGit) {
         this.nikGit = nikGit;
+    }
+
+    @Override
+    public String toString() {
+        return "firstName " + firstName + "   lastName " + lastName;
     }
 }
 
