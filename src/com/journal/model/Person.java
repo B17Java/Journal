@@ -10,7 +10,8 @@ abstract public class Person {
     private String phone;
     private String nikGit;
 
-    Person(String firstName, String lastName){
+    Person(long id, String firstName, String lastName){
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -71,3 +72,4 @@ abstract public class Person {
         this.nikGit = nikGit;
     }
 }
+
