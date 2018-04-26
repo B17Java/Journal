@@ -1,7 +1,9 @@
 package com.journal.model;
 
 
+
 public abstract class Person {
+
 
     private int id;
     private String firstName;
@@ -17,7 +19,6 @@ public abstract class Person {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
 
 
     public int getId() {
