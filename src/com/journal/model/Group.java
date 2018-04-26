@@ -1,6 +1,7 @@
 package com.journal.model;
 
 public class Group {
+
     private long id;
     private String groupName;
     private long[] idStudents;
@@ -45,4 +46,5 @@ public class Group {
     public void setEndData(String endData) {
         this.endData = endData;
     }
+
 }

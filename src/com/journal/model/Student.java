@@ -1,4 +1,5 @@
 package com.journal.model;
+
 /*
 Oleksandr Kuzmenko
  */
@@ -8,4 +9,5 @@ public class Student extends Person{
         super(firstName, lastName);
 
     }
+
 }

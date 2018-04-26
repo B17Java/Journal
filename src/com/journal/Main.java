@@ -1,6 +1,7 @@
 package com.journal;
 
 
+
 import com.journal.model.Person;
 import com.journal.repository.PersonRepository;
 import com.journal.repository.impl.PersonRepositoryList;
@@ -19,5 +20,6 @@ public class Main {
         System.out.println(a.read((int)person2.getId()));
 
         System.out.println(a.size());
+
     }
 }
