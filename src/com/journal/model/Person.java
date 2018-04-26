@@ -1,7 +1,8 @@
 package com.journal.model;
 
-public class Person {
-    private int g;
+
+public abstract class Person {
+
     private int id;
     private String firstName;
     private String lastName;
@@ -11,18 +12,13 @@ public class Person {
     private String phone;
     private String nikGit;
 
+
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public int getG() {
-        return g;
-    }
 
-    public void setG(int g) {
-        this.g = g;
-    }
 
     public int getId() {
         return id;
