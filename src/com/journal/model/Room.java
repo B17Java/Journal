@@ -1,5 +1,7 @@
 package com.journal.model;
 
-public class Room {
-
+public enum Room {
+    first,
+    second,
+    third
 }
