@@ -4,7 +4,11 @@ import com.journal.model.Person;
 
 public interface PersonRepository {
 
-    boolean create(Person person);
+        boolean create(Person person);
+        Person read(int id);
+        int size();
+
+
 }
 
 
