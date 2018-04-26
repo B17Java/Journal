@@ -1,7 +1,8 @@
 package com.journal.model;
 
-abstract public class Person {
-    private long id;
+public class Person {
+    private int g;
+    private int id;
     private String firstName;
     private String lastName;
     private int age;
@@ -10,16 +11,24 @@ abstract public class Person {
     private String phone;
     private String nikGit;
 
-    Person(String firstName, String lastName){
+    public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public long getId() {
+    public int getG() {
+        return g;
+    }
+
+    public void setG(int g) {
+        this.g = g;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -69,6 +78,11 @@ abstract public class Person {
 
     public void setNikGit(String nikGit) {
         this.nikGit = nikGit;
+    }
+
+    @Override
+    public String toString() {
+        return "firstName " + firstName + "   lastName " + lastName;
     }
 }
 
