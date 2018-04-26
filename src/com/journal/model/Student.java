@@ -1,7 +1,11 @@
 package com.journal.model;
-
+/*
+Oleksandr Kuzmenko
+ */
 public class Student extends Person{
-    Student(long id, String firstName, String lastName) {
-        super(id, firstName, lastName);
+
+    public Student(String firstName, String lastName) {
+        super(firstName, lastName);
+
     }
 }
