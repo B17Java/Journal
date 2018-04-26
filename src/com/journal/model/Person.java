@@ -1,7 +1,7 @@
 package com.journal.model;
 
-abstract public class Person {
-    private long id;
+public abstract class Person {
+    private int id;
     private String firstName;
     private String lastName;
     private int age;
@@ -10,17 +10,16 @@ abstract public class Person {
     private String phone;
     private String nikGit;
 
-    Person(long id, String firstName, String lastName){
-        this.id = id;
+    Person(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
