@@ -10,8 +10,7 @@ abstract public class Person {
     private String phone;
     private String nikGit;
 
-    Person(long id, String firstName, String lastName){
-        this.id = id;
+    Person(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
     }
