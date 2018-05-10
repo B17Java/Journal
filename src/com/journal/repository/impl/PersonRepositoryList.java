@@ -1,7 +1,7 @@
 package com.journal.repository.impl;
 
 import com.journal.model.Person;
-import com.journal.repository.PersonRepository;
+import com.journal.repository.interf.PersonRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,21 @@ public class PersonRepositoryList implements PersonRepository {
     @Override
     public int size() {
         return personList.size();
+    }
+
+    @Override
+    public boolean update(Person person) {
+        return false;
+    }
+
+    @Override
+    public boolean delete(int id) {
+        return false;
+    }
+
+    @Override
+    public boolean delete(Person person) {
+        return false;
     }
 }
 
