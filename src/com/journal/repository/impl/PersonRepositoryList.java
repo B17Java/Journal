@@ -1,7 +1,7 @@
 package com.journal.repository.impl;
 
 import com.journal.model.Person;
-import com.journal.repository.PersonRepository;
+import com.journal.repository.interf.PersonRepository;
 
 import java.util.ArrayList;
 import java.util.List;
