@@ -11,7 +11,7 @@ public class Lesson {
         this.lessonName = lessonName;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
@@ -35,7 +35,7 @@ public class Lesson {
         this.lessonRoom = lessonRoom;
     }
 
-    public long getIdGroup() {
+    public int getIdGroup() {
         return idGroup;
     }
 
