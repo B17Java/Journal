@@ -1,12 +1,12 @@
 package com.journal.model;
 
 public class Lesson {
-    private long id;
+    private int id;
     private String lessonName;
     private Room lessonRoom;
-    private long idGroup;
+    private int idGroup;
 
-    public Lesson(long id, String lessonName) {
+    public Lesson(int id, String lessonName) {
         this.id = id;
         this.lessonName = lessonName;
     }
@@ -15,7 +15,9 @@ public class Lesson {
         return id;
     }
 
-    public void setId(long id) { this.id = id; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getLessonName() {
         return lessonName;
@@ -37,7 +39,7 @@ public class Lesson {
         return idGroup;
     }
 
-    public void setIdGroup(long idGroup) {
+    public void setIdGroup(int idGroup) {
         this.idGroup = idGroup;
     }
 }

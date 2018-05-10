@@ -1,38 +1,37 @@
 package com.journal.repository.impl;
 
+import com.journal.model.Person;
 import com.journal.model.Student;
 import com.journal.repository.interf.StudentRepository;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
-import java.util.Map;
-
-public class StudentRepositoryMap implements StudentRepository {
-    Map<Integer, Student> studentMap = new HashMap<>();
+public class StudentRepositoryList  implements StudentRepository{
+    private List<Person> studentList = new ArrayList<>();
     private int id = 0;
 
     @Override
     public boolean create(Student student) {
-        studentMap.put(id,student);
+        studentList.add(id, student);
         student.setId(id++);
         return true;
     }
 
     @Override
     public Student read(Integer id) {
-         return studentMap.get(id);
+        return null;
     }
 
     @Override
     public boolean update(Student student) {
-         studentMap.put(student.getId(), student);
-         return true;
+        return false;
     }
 
     @Override
     public boolean delete(Integer id) {
-        studentMap.remove(id);
-        return true;
+        return false;
     }
+
 
 }
