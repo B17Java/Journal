@@ -29,5 +29,23 @@ public class PersonRepositoryMap implements PersonRepository {
         return personMap.size();
     }
 
+    @Override
+    public boolean update(Person person) {
+        personMap.put(person.getId(), person);
+        return true;
+    }
+
+    @Override
+    public boolean delete(int id) {
+        personMap.remove(id);
+        return true;
+    }
+
+    @Override
+    public boolean delete(Person person) {
+        personMap.remove(person.getId());
+        return true;
+    }
+
 
 }
