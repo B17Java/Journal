@@ -1,6 +1,6 @@
 package com.journal.validator;
 
-public class ValidadorText {
+public class Validador {
     public static boolean nameValid(String name){
         String temp = name;
         if(name != null && name.isEmpty()){
