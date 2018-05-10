@@ -1,14 +1,14 @@
 package com.journal.repository.impl;
 
 import com.journal.model.Student;
-import com.journal.repository.interf.StudentRepository;
+import com.journal.repository.StudentRepository;
 
 import java.util.HashMap;
 
 import java.util.Map;
 
 public class StudentRepositoryMap implements StudentRepository {
-    Map<Integer, Student> studentMap = new HashMap<>();
+    private Map<Integer, Student> studentMap = new HashMap<>();
     private int id = 0;
 
     @Override

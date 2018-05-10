@@ -2,7 +2,7 @@ package com.journal.repository.impl;
 
 
 import com.journal.model.Person;
-import com.journal.repository.interf.PersonRepository;
+import com.journal.repository.PersonRepository;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,6 +27,24 @@ public class PersonRepositoryMap implements PersonRepository {
     @Override
     public int size() {
         return personMap.size();
+    }
+
+    @Override
+    public boolean update(Person person) {
+        personMap.put(person.getId(), person);
+        return true;
+    }
+
+    @Override
+    public boolean delete(int id) {
+        personMap.remove(id);
+        return true;
+    }
+
+    @Override
+    public boolean delete(Person person) {
+        personMap.remove(person.getId());
+        return true;
     }
 
 

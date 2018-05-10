@@ -3,7 +3,6 @@ package com.journal.model;
 public class Group {
 
     private int id;
-
     private String groupName;
     private int[] idStudents;
     private String startData;
@@ -16,7 +15,7 @@ public class Group {
         this.endData = endData;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
