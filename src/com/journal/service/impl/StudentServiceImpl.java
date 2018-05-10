@@ -2,7 +2,7 @@ package com.journal.service.impl;
 
 import com.journal.model.Student;
 import com.journal.repository.impl.StudentRepositoryList;
-import com.journal.repository.interf.StudentRepository;
+import com.journal.repository.StudentRepository;
 import com.journal.repository.impl.StudentRepositoryMap;
 import com.journal.service.StudentService;
 

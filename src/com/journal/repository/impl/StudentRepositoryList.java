@@ -2,7 +2,7 @@ package com.journal.repository.impl;
 
 import com.journal.model.Person;
 import com.journal.model.Student;
-import com.journal.repository.interf.StudentRepository;
+import com.journal.repository.StudentRepository;
 
 import java.util.ArrayList;
 import java.util.List;

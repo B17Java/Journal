@@ -1,4 +1,4 @@
-package com.journal;
+package com.journal.exeption;
 
 public class IncorrectInputException extends Exception {
         private String message;
