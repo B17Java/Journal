@@ -1,4 +1,4 @@
-package com.journal.repository.interf;
+package com.journal.repository;
 
 import com.journal.model.Student;
 
