@@ -4,6 +4,7 @@ import com.journal.IncorrectInputException;
 
 public class Validador {
     public static boolean stringValid(String string) throws IncorrectInputException {
+        string = string.trim();
         if(string != null && !string.isEmpty()){
             int flag;
             char[] letters = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s'
@@ -28,6 +29,7 @@ public class Validador {
     }
 
     public static boolean numberValid(String string) throws IncorrectInputException {
+        string = string.trim();
         if(string != null && !string.isEmpty()){
             int flag;
             char[] numbers = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+'};
