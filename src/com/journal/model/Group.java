@@ -2,24 +2,24 @@ package com.journal.model;
 
 public class Group {
 
-    private long id;
+    private int id;
     private String groupName;
-    private long[] idStudents;
+    private int[] idStudents;
     private String startData;
     private String endData;
 
-    public Group(long id, String groupName, String startData, String endData) {
+    public Group(int id, String groupName, String startData, String endData) {
         this.id = id;
         this.groupName = groupName;
         this.startData = startData;
         this.endData = endData;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
