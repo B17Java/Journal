@@ -2,9 +2,8 @@ package com.journal;
 
 
 import com.journal.model.Person;
-import com.journal.repository.PersonRepository;
+import com.journal.repository.interf.PersonRepository;
 import com.journal.repository.impl.PersonRepositoryList;
-import com.journal.repository.impl.PersonRepositoryMap;
 
 public class Main {
     public static void main(String[] args) {

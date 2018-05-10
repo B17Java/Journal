@@ -1,4 +1,4 @@
-package com.journal.repository;
+package com.journal.repository.interf;
 
 import com.journal.model.Person;
 
