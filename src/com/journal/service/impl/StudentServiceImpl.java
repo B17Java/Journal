@@ -61,7 +61,7 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean delete(Student student) {
         if(studentRepositoryMap.read(student.getId()).getId() == student.getId()) {
-            this.studentRepositoryMap.delete(student.getId());
+            this.studentRepositoryMap.delete(student);
 
         }else{
             return false;
