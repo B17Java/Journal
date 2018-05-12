@@ -34,12 +34,12 @@ public class GroupRepositoryMap implements GroupRepository {
         return true;
     }
 
+
     @Override
     public boolean delete(Group group) {
             groupMap.remove(group.getId());
             return true;
         }
-
 
 
 }

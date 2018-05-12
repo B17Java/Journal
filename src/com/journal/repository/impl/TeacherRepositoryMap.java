@@ -34,4 +34,10 @@ public class TeacherRepositoryMap implements TeacherRepository{
         teacherMap.remove(id);
         return true;
     }
+
+    @Override
+    public boolean delete(Teacher teacher) {
+        teacherMap.remove(teacher.getId());
+        return true;
+    }
 }

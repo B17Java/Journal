@@ -34,6 +34,12 @@ public class LessonRepositoryMap implements LessonRepository {
             lessonMap.remove(id);
             return true;
         }
+
+    @Override
+    public boolean delete(Lesson lesson) {
+        lessonMap.remove(lesson.getId());
+        return true;
+    }
 }
 
 

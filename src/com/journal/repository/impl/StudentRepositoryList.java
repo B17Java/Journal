@@ -33,5 +33,10 @@ public class StudentRepositoryList  implements StudentRepository{
         return false;
     }
 
+    @Override
+    public boolean delete(Student student) {
+        return false;
+    }
+
 
 }
