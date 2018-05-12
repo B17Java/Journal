@@ -9,7 +9,7 @@ import com.journal.service.StudentService;
 import com.journal.validator.Validador;
 
 
-public class StudentServiceImpl implements StudentService {
+public class StudentServiceI implements StudentService {
 
 
     private StudentRepository studentRepositoryMap = new StudentRepositoryMap();
