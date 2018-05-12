@@ -22,8 +22,7 @@ public class StudentServiceImpl implements StudentService {
         try {
             Validador.stringValid(student.getFirstName());
             Validador.stringValid(student.getLastName());
-                this.studentRepositoryMap.create(student);
-
+             this.studentRepositoryMap.create(student);
         } catch (IncorrectInputException e) {
             e.printStackTrace();
         }

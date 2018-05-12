@@ -8,4 +8,5 @@ public interface LessonRepository {
     boolean update (Lesson lesson);
     boolean delete (Integer id);
     boolean delete(Lesson lesson);
+
 }
