@@ -60,4 +60,6 @@ public class Validador {
     }
 
 
+    public static void groupName(String groupName) throws IncorrectInputException{
+    }
 }
