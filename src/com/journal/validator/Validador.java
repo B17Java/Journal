@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class Validador {
     public static boolean stringValid(String string) throws IncorrectInputException {
-        if(string != null && !string.isEmpty()){
+        if( string != null && (string.length() > 1) ){
             String str = "abcdefghijklmnopqrstuvwxyzABCDIFGHIJKLMNOPQRSTUVWXYZ-";
             for (int i = 0; i < string.length(); i++){
                 int index = str.indexOf(string.charAt(i));
@@ -22,7 +22,7 @@ public class Validador {
     }
 
     public static boolean numberValid(String string) throws IncorrectInputException {
-        if(string != null && !string.isEmpty()){
+        if( string != null && (string.length() > 1) ){
             String str = "0123456789+";
             for (int i = 0; i < string.length(); i++){
                 int index = str.indexOf(string.charAt(i));

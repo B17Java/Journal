@@ -20,9 +20,9 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean create(Student student) {
         try {
-            if(Validador.stringValid(student.getFirstName()) && Validador.stringValid(student.getLastName()))
-                this.studentRepositoryMap.create(student);
-            else throw new IncorrectInputException("Incorrectly input litter");
+            Validador.stringValid(student.getFirstName());
+            Validador.stringValid(student.getLastName());
+            this.studentRepositoryMap.create(student);
         } catch (IncorrectInputException e) {
             e.printStackTrace();
         }

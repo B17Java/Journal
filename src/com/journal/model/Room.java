@@ -1,7 +1,10 @@
 package com.journal.model;
 
 public enum Room {
-    first,
-    second,
-    third
+    SquareSpace,
+    LongSpace,
+    Magenta,
+    SeaRoom,
+    RelaxRoom,
+    SkyRoom
 }

@@ -8,5 +8,6 @@ public interface TeacherRepository {
     Teacher read(Integer id);
     boolean update(Teacher teacher);
     boolean delete(Integer id);
+    boolean delete(Teacher teacher);
 
 }
