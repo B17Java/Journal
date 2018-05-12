@@ -1,13 +1,12 @@
 package com.journal;
 
 import com.journal.model.Student;
-import com.journal.service.StudentService;
-import com.journal.service.impl.StudentServiceI;
+import com.journal.service.impl.StudentServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
         Student student = new Student("Vladislav", "Kuznetsov");
-        StudentService studentService = new StudentServiceI();
+        com.journal.service.StudentService studentService = new StudentServiceImpl();
         studentService.create(student);
         try {
             System.out.println(studentService.read(0));

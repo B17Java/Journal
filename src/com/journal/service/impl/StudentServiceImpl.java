@@ -2,14 +2,13 @@ package com.journal.service.impl;
 
 import com.journal.exeption.IncorrectInputException;
 import com.journal.model.Student;
-import com.journal.repository.impl.StudentRepositoryList;
 import com.journal.repository.StudentRepository;
 import com.journal.repository.impl.StudentRepositoryMap;
 import com.journal.service.StudentService;
 import com.journal.validator.Validador;
 
 
-public class StudentServiceI implements StudentService {
+public class StudentServiceImpl implements StudentService {
 
 
     private StudentRepository studentRepositoryMap = new StudentRepositoryMap();
