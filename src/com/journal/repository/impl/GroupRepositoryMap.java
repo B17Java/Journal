@@ -33,4 +33,13 @@ public class GroupRepositoryMap implements GroupRepository {
         groupMap.remove(id);
         return true;
     }
+
+    @Override
+    public boolean delete(Group group) {
+            groupMap.remove(group.getId());
+            return true;
+        }
+
+
+
 }
