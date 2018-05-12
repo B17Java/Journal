@@ -20,9 +20,10 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean create(Student student) {
         try {
-            if(Validador.stringValid(student.getFirstName()) && Validador.stringValid(student.getLastName()))
+            Validador.stringValid(student.getFirstName());
+            Validador.stringValid(student.getLastName());
                 this.studentRepositoryMap.create(student);
-            else throw new IncorrectInputException("Incorrectly input litter");
+
         } catch (IncorrectInputException e) {
             e.printStackTrace();
         }
@@ -39,7 +40,8 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean update(Student student) {
         try {
-            if(Validador.stringValid(student.getFirstName()) && Validador.stringValid(student.getLastName()))
+           Validador.stringValid(student.getFirstName());
+           Validador.stringValid(student.getLastName());
             this.studentRepositoryMap.update(student);
         } catch (IncorrectInputException e) {
             e.printStackTrace();
@@ -53,11 +55,18 @@ public class StudentServiceImpl implements StudentService {
             this.studentRepositoryMap.delete(id);
 
         }else{
-            try {
-                throw new IncorrectInputException("Not found student");
-            } catch (IncorrectInputException e) {
-                e.printStackTrace();
-            }
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean delete(Student student) {
+        if(studentRepositoryMap.read(student.getId()).getId() == student.getId()) {
+            this.studentRepositoryMap.delete(student.getId());
+
+        }else{
+            return false;
         }
         return true;
     }
