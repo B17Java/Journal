@@ -7,4 +7,5 @@ public interface StudentService {
     Student read(Integer id);
     boolean update(Student student);
     boolean delete(Integer id);
+    boolean delete(Student student);
 }

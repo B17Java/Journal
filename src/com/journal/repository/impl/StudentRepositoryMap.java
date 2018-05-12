@@ -35,4 +35,10 @@ public class StudentRepositoryMap implements StudentRepository {
         return true;
     }
 
+    @Override
+    public boolean delete(Student student) {
+        studentMap.remove(student.getId());
+        return true;
+    }
+
 }
