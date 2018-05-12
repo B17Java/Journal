@@ -2,7 +2,6 @@ package com.journal.service.impl;
 
 import com.journal.exeption.IncorrectInputException;
 import com.journal.model.Student;
-import com.journal.repository.impl.StudentRepositoryList;
 import com.journal.repository.StudentRepository;
 import com.journal.repository.impl.StudentRepositoryMap;
 import com.journal.service.StudentService;
@@ -31,9 +30,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student read(Integer id) {
-        if(studentRepositoryMap.read(id).getId() == id)
-            return this.studentRepositoryMap.read(id);
-        else return null;
+         return this.studentRepositoryMap.read(id);
     }
 
     @Override
@@ -62,7 +59,7 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean delete(Student student) {
         if(studentRepositoryMap.read(student.getId()).getId() == student.getId()) {
-            this.studentRepositoryMap.delete(student.getId());
+            this.studentRepositoryMap.delete(student);
 
         }else{
             return false;
