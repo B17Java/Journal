@@ -9,5 +9,5 @@ public interface GroupRepository {
     Group read(Integer id);
     boolean update(Group group);
     boolean delete(Integer id);
-
+    boolean delete(Group group);
 }
