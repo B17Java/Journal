@@ -30,9 +30,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student read(Integer id) {
-        if(studentRepositoryMap.read(id).getId() == id)
-            return this.studentRepositoryMap.read(id);
-        else return null;
+         return this.studentRepositoryMap.read(id);
     }
 
     @Override
