@@ -59,5 +59,18 @@ public class Validador {
         }
     }
 
-
+    public static boolean groupName(String string) throws IncorrectInputException {
+        if( string != null && (string.length() > 1) && (string.length() > 15)){
+            String str = "abcdefghijklmnopqrstuvwxyzABCDIFGHIJKLMNOPQRSTUVWXYZ-0123456789";
+            for (int i = 0; i < string.length(); i++){
+                int index = str.indexOf(string.charAt(i));
+                if (index == -1)
+                    throw new IncorrectInputException("Incorrectly input litter");
+            }
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
