@@ -5,21 +5,25 @@ package com.journal.model;
 public abstract class Person {
 
 
-    private int id;
-    private String firstName;
-    private String lastName;
+    protected int id;
+    protected String firstName;
+    protected String lastName;
     private int age;
 
     private String email;
     private String phone;
     private String nikGit;
 
-
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
+    public Person(int id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public int getId() {
         return id;
