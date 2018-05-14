@@ -74,4 +74,13 @@ public class Validador {
         }
 
     }
+    public static boolean validateGroup(String group) throws IncorrectInputException {
+        regexPattern = Pattern.compile("[a-zA-Z-а-яА-Я]{1,3}[0-9]{1,2}");
+        regMatcher   = regexPattern.matcher(group);
+        if(regMatcher.matches()) {
+            return true;
+        } else {
+            throw new IncorrectInputException("Incorrectly input Group");
+        }
+    }
 }
