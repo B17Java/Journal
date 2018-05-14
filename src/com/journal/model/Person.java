@@ -25,6 +25,15 @@ public abstract class Person {
         this.lastName = lastName;
     }
 
+    public Person(String firstName, String lastName, int age, String email, String phone, String nikGit) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+        this.phone = phone;
+        this.nikGit = nikGit;
+    }
+
     public int getId() {
         return id;
     }

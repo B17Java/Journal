@@ -5,6 +5,7 @@ import com.journal.model.Lesson;
 import com.journal.repository.impl.LessonRepositoryMap;
 import com.journal.service.LessonServise;
 import com.journal.service.TeacherService;
+import com.journal.validator.Validador;
 
 public class LessonServiseImpl implements LessonServise {
 
@@ -12,7 +13,7 @@ public class LessonServiseImpl implements LessonServise {
     @Override
     public boolean create(Lesson lesson) {
         try {
-            TeacherService.Validador.stringValid(lesson.getLessonName());
+            Validador.stringValid(lesson.getLessonName());
             lessonRepositoryMap.create(lesson);
         } catch (IncorrectInputException e) {
             e.printStackTrace();
@@ -28,7 +29,7 @@ public class LessonServiseImpl implements LessonServise {
     @Override
     public boolean update(Lesson lesson) {
         try{
-            TeacherService.Validador.stringValid(lesson.getLessonName());
+            Validador.stringValid(lesson.getLessonName());
             this.lessonRepositoryMap.update(lesson);
         }
         catch (IncorrectInputException e){

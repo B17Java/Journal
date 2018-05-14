@@ -6,6 +6,7 @@ import com.journal.repository.impl.GroupRepositoryMap;
 import com.journal.service.GroupService;
 import com.journal.service.TeacherService;
 import com.journal.exeption.*;
+import com.journal.validator.Validador;
 
 public class GroupServiceImpl implements GroupService {
     private GroupRepository groupRepositoryMap = new GroupRepositoryMap();
@@ -14,7 +15,7 @@ public class GroupServiceImpl implements GroupService {
     @Override
     public boolean create(Group group) {
         try {
-            TeacherService.Validador.groupName(group.getGroupName());
+            Validador.groupName(group.getGroupName());
             this.groupRepositoryMap.create(group);
         } catch (IncorrectInputException e) {
             e.printStackTrace();
@@ -30,7 +31,7 @@ public class GroupServiceImpl implements GroupService {
     @Override
     public boolean update(Group group) {
         try {
-            TeacherService.Validador.groupName(group.getGroupName());
+            Validador.groupName(group.getGroupName());
             this.groupRepositoryMap.update(group);
         } catch (IncorrectInputException e) {
             e.printStackTrace();

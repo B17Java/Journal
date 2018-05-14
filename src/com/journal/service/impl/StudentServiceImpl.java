@@ -5,7 +5,7 @@ import com.journal.model.Student;
 import com.journal.repository.StudentRepository;
 import com.journal.repository.impl.StudentRepositoryMap;
 import com.journal.service.StudentService;
-import com.journal.service.TeacherService;
+import com.journal.validator.Validador;
 
 
 public class StudentServiceImpl implements StudentService {
@@ -16,8 +16,8 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean create(Student student) {
         try {
-            TeacherService.Validador.stringValid(student.getFirstName());
-            TeacherService.Validador.stringValid(student.getLastName());
+            Validador.stringValid(student.getFirstName());
+            Validador.stringValid(student.getLastName());
             this.studentRepositoryMap.create(student);
         } catch (IncorrectInputException e) {
             e.printStackTrace();
@@ -33,8 +33,8 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean update(Student student) {
         try {
-           TeacherService.Validador.stringValid(student.getFirstName());
-           TeacherService.Validador.stringValid(student.getLastName());
+           Validador.stringValid(student.getFirstName());
+           Validador.stringValid(student.getLastName());
            this.studentRepositoryMap.update(student);
         } catch (IncorrectInputException e) {
             e.printStackTrace();

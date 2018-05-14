@@ -4,6 +4,7 @@ import com.journal.exeption.IncorrectInputException;
 import com.journal.model.Teacher;
 import com.journal.repository.impl.TeacherRepositoryFileVlad;
 import com.journal.service.TeacherService;
+import com.journal.validator.Validador;
 
 public class TeacherServiceImpl implements TeacherService {
 
