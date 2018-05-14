@@ -4,7 +4,7 @@ import com.journal.exeption.IncorrectInputException;
 import com.journal.model.Lesson;
 import com.journal.repository.impl.LessonRepositoryMap;
 import com.journal.service.LessonServise;
-import com.journal.validator.Validador;
+import com.journal.service.TeacherService;
 
 public class LessonServiseImpl implements LessonServise {
 
@@ -12,7 +12,7 @@ public class LessonServiseImpl implements LessonServise {
     @Override
     public boolean create(Lesson lesson) {
         try {
-            Validador.stringValid(lesson.getLessonName());
+            TeacherService.Validador.stringValid(lesson.getLessonName());
             lessonRepositoryMap.create(lesson);
         } catch (IncorrectInputException e) {
             e.printStackTrace();
@@ -28,7 +28,7 @@ public class LessonServiseImpl implements LessonServise {
     @Override
     public boolean update(Lesson lesson) {
         try{
-            Validador.stringValid(lesson.getLessonName());
+            TeacherService.Validador.stringValid(lesson.getLessonName());
             this.lessonRepositoryMap.update(lesson);
         }
         catch (IncorrectInputException e){
