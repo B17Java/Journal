@@ -4,7 +4,7 @@ import com.journal.model.Group;
 import com.journal.repository.GroupRepository;
 import com.journal.repository.impl.GroupRepositoryMap;
 import com.journal.service.GroupService;
-import com.journal.validator.Validador;
+import com.journal.service.TeacherService;
 import com.journal.exeption.*;
 
 public class GroupServiceImpl implements GroupService {
@@ -14,7 +14,7 @@ public class GroupServiceImpl implements GroupService {
     @Override
     public boolean create(Group group) {
         try {
-            Validador.groupName(group.getGroupName());
+            TeacherService.Validador.groupName(group.getGroupName());
             this.groupRepositoryMap.create(group);
         } catch (IncorrectInputException e) {
             e.printStackTrace();
@@ -30,7 +30,7 @@ public class GroupServiceImpl implements GroupService {
     @Override
     public boolean update(Group group) {
         try {
-            Validador.groupName(group.getGroupName());
+            TeacherService.Validador.groupName(group.getGroupName());
             this.groupRepositoryMap.update(group);
         } catch (IncorrectInputException e) {
             e.printStackTrace();

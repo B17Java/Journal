@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Start {
     public void start() throws IncorrectInputException {
-        char choice;
+        int choice;
         TeacherService teacherService = new TeacherServiceImpl();
         while (true){
             Scanner read = new Scanner(System.in);
@@ -19,13 +19,15 @@ public class Start {
             System.out.println("To delete teacher, press '3'");
             System.out.println("Press '0' to enter");
             String data = read.nextLine();
-            choice = data.charAt(0);
-            if (choice != '0' && choice != '1' && choice != '2' && choice != '3')
-                throw new IncorrectInputException("Incorrectly Input");
-            if (choice == '0') break;
-            if (choice == '1') System.out.println(HandleTeacher.inputData());
-            if (choice == '2') System.out.println(HandleTeacher.getInfoById());
-            if (choice == '3') System.out.println(HandleTeacher.deleteById());
+            choice =Integer.parseInt(data);
+            switch (choice){
+                case 0: return;
+                case 1:System.out.println(HandleTeacher.inputData());   break;
+                case 2:System.out.println(HandleTeacher.getInfoById()); break;
+                case 3: System.out.println(HandleTeacher.deleteById()); break;
+                default: throw new IncorrectInputException("Incorrectly Input");
+            }
+
             System.out.println("");
         }
     }

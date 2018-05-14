@@ -1,9 +1,7 @@
 package com.journal.start;
 
-import com.journal.exeption.IncorrectInputException;
 import com.journal.service.TeacherService;
 import com.journal.service.impl.TeacherServiceImpl;
-import com.journal.validator.Validador;
 import com.journal.model.Teacher;
 import java.util.Scanner;
 
