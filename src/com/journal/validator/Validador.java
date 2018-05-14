@@ -83,4 +83,13 @@ public class Validador {
             throw new IncorrectInputException("Incorrectly input Group");
         }
     }
+    public static boolean validateText(String str) throws IncorrectInputException {
+        regexPattern = Pattern.compile("[a-zA-Z-а-яА-Я]{1,15}");
+        regMatcher   = regexPattern.matcher(str);
+        if(regMatcher.matches()) {
+            return true;
+        } else {
+            throw new IncorrectInputException("Incorrectly input Text");
+        }
+    }
 }

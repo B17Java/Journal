@@ -20,6 +20,30 @@ public abstract class Person {
         this.lastName = lastName;
     }
 
+    public Person(int id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Person(int id, String firstName, String lastName, int age, String email, String phone, String nikGit) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+        this.phone = phone;
+        this.nikGit = nikGit;
+    }
+
+    public Person(String firstName, String lastName, int age, String email, String phone, String nikGit) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+        this.phone = phone;
+        this.nikGit = nikGit;
+    }
 
     public int getId() {
         return id;
