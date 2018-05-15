@@ -30,4 +30,11 @@ public class HandleTeacher {
         teacherService.delete(data);
         return true;
     }
+    static boolean inputRandomData() {
+        if(teacherService.create((Teacher)RandomPerson.randomPerson())){
+
+            return true;
+        }
+        else{ return false;}
+    }
 }

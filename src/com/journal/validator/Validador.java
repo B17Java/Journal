@@ -84,7 +84,7 @@ public class Validador {
         }
     }
     public static boolean validateText(String str) throws IncorrectInputException {
-        regexPattern = Pattern.compile("[a-zA-Z-а-яА-Я]{1,15}");
+        regexPattern = Pattern.compile("^[A-ZА-ЯІ][a-z-а-яії]{1,15}",Pattern.UNICODE_CHARACTER_CLASS);
         regMatcher   = regexPattern.matcher(str);
         if(regMatcher.matches()) {
             return true;
