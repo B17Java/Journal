@@ -18,6 +18,10 @@ public class StudentServiceImpl implements StudentService {
         try {
             Validador.stringValid(student.getFirstName());
             Validador.stringValid(student.getLastName());
+            if(student.getEmail() == null){
+                Validador.validateEmailAddress(student.getEmail());
+            }
+
             this.studentRepositoryMap.create(student);
         } catch (IncorrectInputException e) {
             e.printStackTrace();

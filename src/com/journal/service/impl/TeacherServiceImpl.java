@@ -13,8 +13,8 @@ public class TeacherServiceImpl implements TeacherService {
     @Override
     public boolean create(Teacher teacher) {
         try {
-            Validador.stringValid(teacher.getFirstName());
-            Validador.stringValid(teacher.getLastName());
+            Validador.validateText(teacher.getFirstName());
+            Validador.validateText(teacher.getLastName());
             teacherRepositoryFile.create(teacher);
         } catch (IncorrectInputException e) {
             e.printStackTrace();
