@@ -5,6 +5,7 @@ Oleksandr Kuzmenko
  */
 public class Student extends Person{
 
+
     private Student(Builder builder) {
         this.setFirstName(builder.firstName);
         this.setLastName(builder.lastName);
@@ -23,7 +24,7 @@ public class Student extends Person{
         private int age;
         private String address;
         private String email;
-        private String phone;
+        private String phone ;
         private String nikGit;
 
         public Builder(String firstName, String lastName){

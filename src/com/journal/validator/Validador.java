@@ -50,7 +50,7 @@ public class Validador {
     }
 
     public static boolean validateMobileNumber(String mobileNumber) throws IncorrectInputException {
-        regexPattern = Pattern.compile("^\\+[0-9]{2,3}+-[0-9]{10}$");
+        regexPattern = Pattern.compile("^\\+[0-9]{2}+-[0-9]{10}$");
         regMatcher   = regexPattern.matcher(mobileNumber);
         if(regMatcher.matches()) {
             return true;

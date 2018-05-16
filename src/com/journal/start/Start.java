@@ -1,7 +1,9 @@
 package com.journal.start;
 
 import com.journal.exeption.IncorrectInputException;
+import com.journal.model.Student;
 import com.journal.service.TeacherService;
+import com.journal.service.impl.StudentServiceImpl;
 import com.journal.service.impl.TeacherServiceImpl;
 import com.journal.validator.Validador;
 
@@ -40,8 +42,15 @@ public class Start {
 
             System.out.println("");
         }
-    }
 
+    }
+    public void startStudent(){
+        StudentServiceImpl stdent = new StudentServiceImpl();
+        stdent.create(new Student.Builder("Петро" , "Коробань").setEmail("koroban@gmail.com").setPhone("+38-0632890611").builder());
+        System.out.println(stdent.read(0));
+
+
+    }
 
 
 
