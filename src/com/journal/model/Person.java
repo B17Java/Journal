@@ -5,34 +5,14 @@ package com.journal.model;
 public abstract class Person {
 
 
-    protected int id;
-    protected String firstName;
-    protected String lastName;
+    private int id;
+    private String firstName;
+    private String lastName;
     private int age;
-
+    private String address;
     private String email;
     private String phone;
     private String nikGit;
-
-    public Person(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public Person(int id, String firstName, String lastName) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public Person(String firstName, String lastName, int age, String email, String phone, String nikGit) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.email = email;
-        this.phone = phone;
-        this.nikGit = nikGit;
-    }
 
     public int getId() {
         return id;
@@ -66,6 +46,14 @@ public abstract class Person {
         this.age = age;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -90,9 +78,11 @@ public abstract class Person {
         this.nikGit = nikGit;
     }
 
+
+
     @Override
     public String toString() {
-        return "firstName " + firstName + "   lastName " + lastName;
+        return "firstName: " + firstName + "   lastName: " + lastName;
     }
 }
 
