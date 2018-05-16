@@ -16,10 +16,13 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean create(Student student) {
         try {
-            Validador.stringValid(student.getFirstName());
-            Validador.stringValid(student.getLastName());
-            if(student.getEmail() == null){
+            Validador.validateText(student.getFirstName());
+            Validador.validateText(student.getLastName());
+            if(student.getEmail() != null){
                 Validador.validateEmailAddress(student.getEmail());
+            }
+            if(student.getPhone() != null){
+                Validador.validateMobileNumber(student.getPhone());
             }
 
             this.studentRepositoryMap.create(student);

@@ -78,11 +78,19 @@ public abstract class Person {
         this.nikGit = nikGit;
     }
 
-
-
     @Override
     public String toString() {
-        return "firstName: " + firstName + "   lastName: " + lastName;
+
+        return "Person{" +
+                "id=" + id +
+                ",\nfirstName='" + firstName + '\'' +
+                ",\nlastName='" + lastName + '\'' +
+                ",\nage=" + age +
+                ",\naddress='" + address + '\'' +
+                ",\nemail='" + email + '\'' +
+                ",\nphone='" + phone + '\'' +
+                ",\nnikGit='" + nikGit + '\'' +
+                '}';
     }
 }
 
