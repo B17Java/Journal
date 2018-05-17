@@ -6,6 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Validador {
+    @Deprecated
     public static boolean stringValid(String string) throws IncorrectInputException {
         if( string != null && (string.length() > 1) ){
             String str = "abcdefghijklmnopqrstuvwxyzABCDIFGHIJKLMNOPQRSTUVWXYZ-";
@@ -20,7 +21,7 @@ public class Validador {
             return false;
         }
     }
-
+@Deprecated
     public static boolean numberValid(String string) throws IncorrectInputException {
         if( string != null && (string.length() > 1) ){
             String str = "0123456789+";
@@ -58,7 +59,7 @@ public class Validador {
             throw new IncorrectInputException("Incorrectly input mobile number");
         }
     }
-
+@Deprecated
     public static boolean groupName(String string) throws IncorrectInputException {
         if( string != null && (string.length() > 1) && (string.length() > 15)){
             String str = "abcdefghijklmnopqrstuvwxyzABCDIFGHIJKLMNOPQRSTUVWXYZ-0123456789";
