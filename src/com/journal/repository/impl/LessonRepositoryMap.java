@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class LessonRepositoryMap implements LessonRepository {
         Map<Integer, Lesson> lessonMap = new HashMap<>();
-        private int id = 0;
+        private int id = 1;
 
         @Override
         public boolean create(Lesson lesson) {

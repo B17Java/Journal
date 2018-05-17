@@ -93,4 +93,14 @@ public class Validador {
             throw new IncorrectInputException("Incorrectly input Text.");
         }
     }
+
+    public static boolean validateFullText(String str) throws IncorrectInputException {
+        regexPattern = Pattern.compile("^[A-ZА-ЯІ][a-z-а-яії\\.\\-\\+#_:;\\/()]+",Pattern.UNICODE_CHARACTER_CLASS);
+        regMatcher   = regexPattern.matcher(str);
+        if(regMatcher.matches()) {
+            return true;
+        } else {
+            throw new IncorrectInputException("Incorrectly input Text.");
+        }
+    }
 }
