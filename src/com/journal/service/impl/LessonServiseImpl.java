@@ -13,7 +13,7 @@ public class LessonServiseImpl implements LessonServise {
     @Override
     public boolean create(Lesson lesson) {
         try {
-            Validador.stringValid(lesson.getLessonName());
+            Validador.validateFullText(lesson.getLessonName());
             lessonRepositoryMap.create(lesson);
         } catch (IncorrectInputException e) {
             e.printStackTrace();
@@ -29,7 +29,7 @@ public class LessonServiseImpl implements LessonServise {
     @Override
     public boolean update(Lesson lesson) {
         try{
-            Validador.stringValid(lesson.getLessonName());
+            Validador.validateFullText(lesson.getLessonName());
             this.lessonRepositoryMap.update(lesson);
         }
         catch (IncorrectInputException e){

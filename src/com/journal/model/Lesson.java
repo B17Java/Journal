@@ -6,8 +6,17 @@ public class Lesson {
     private Room lessonRoom;
     private int idGroup;
 
-    public Lesson(int id, String lessonName) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "Lesson{" +
+                "id=" + id +
+                ", lessonName='" + lessonName + '\'' +
+                ", lessonRoom=" + lessonRoom +
+                ", idGroup=" + idGroup +
+                '}';
+    }
+
+    public Lesson(String lessonName) {
         this.lessonName = lessonName;
     }
 
