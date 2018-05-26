@@ -31,7 +31,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public boolean create(String name, String secondName) throws IncorrectInputException {
-        return create(new Student.Builder(name , secondName).builder());
+        return create(Student.builder().firstName(name).lastName(secondName).build());
     }
 
     @Override

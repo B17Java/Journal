@@ -46,7 +46,7 @@ public class Start {
     }
     public void startStudent() throws IncorrectInputException {
         StudentServiceImpl stdent = new StudentServiceImpl();
-        stdent.create(new Student.Builder("Петро" , "Коробань").setEmail("koroban@gmail.com").setPhone("+38-0632890611").builder());
+        stdent.create(Student.builder().firstName("Петро").lastName("Коробань").email("koroban@gmail.com").phone("+38-0632890611").build());
         System.out.println(stdent.read(0));
 
 

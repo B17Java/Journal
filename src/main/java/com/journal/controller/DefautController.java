@@ -3,6 +3,7 @@ package com.journal.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.journal.exeption.IncorrectInputException;
+import com.journal.model.Student;
 import com.journal.service.StudentService;
 import com.journal.service.impl.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,19 +32,39 @@ public class DefautController {
                 "}";
     }
 
-    @RequestMapping("/student/create/{name}/{secondName}")
-    public String createStudent(@PathVariable String name,
-                                @PathVariable String secondName) {
+//    @RequestMapping("/student/create/{name}/{secondName}")
+//    public String createStudent(@PathVariable String name,
+//                                @PathVariable String secondName) {
+//        try {
+//            studentService.create(name, secondName);
+//            return new ObjectMapper().writeValueAsString(studentService.getAll());
+//        } catch (JsonProcessingException e) {
+//            return "{error}";
+//        } catch (IncorrectInputException e) {
+//            return "{error: validation error}";
+//        }
+//    }
+@RequestMapping("/student/create/{name}/{secondName}/{age}")
+public String createStudent(@PathVariable String name,
+                            @PathVariable String secondName,
+                            @PathVariable int age) {
+    try {
+        studentService.create(Student.builder().firstName(name).lastName(secondName).age(age).build());
+        return new ObjectMapper().writeValueAsString(studentService.getAll());
+    } catch (JsonProcessingException e) {
+        return "{error}";
+    } catch (IncorrectInputException e) {
+        return "{error: validation error}";
+    }
+}
+
+    @RequestMapping("/student/all")
+    public String getAll(){
         try {
-            studentService.create(name, secondName);
             return new ObjectMapper().writeValueAsString(studentService.getAll());
         } catch (JsonProcessingException e) {
-            return "{error}";
-        } catch (IncorrectInputException e) {
-            return "{error: validation error}";
+            return  "{error}";
         }
     }
-
-//    @RequestMapping("/student/all")
 
 }
