@@ -6,9 +6,7 @@ import lombok.Data;
 import lombok.NonNull;
 import lombok.experimental.FieldDefaults;
 
-/*
-Oleksandr Kuzmenko
- */
+
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
