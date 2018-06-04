@@ -12,9 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+//@RequestMapping("/admin")
 public class DefautController {
 
     StudentService studentService = new StudentServiceImpl();
+
+    public static void main(String[] args) {
+        DefautController defautController = new DefautController();
+        System.out.println(defautController.hiPeople("Alex"));
+    }
 
     @RequestMapping("/")
     public String home() {
@@ -32,18 +38,18 @@ public class DefautController {
                 "}";
     }
 
-//    @RequestMapping("/student/create/{name}/{secondName}")
-//    public String createStudent(@PathVariable String name,
-//                                @PathVariable String secondName) {
-//        try {
-//            studentService.create(name, secondName);
-//            return new ObjectMapper().writeValueAsString(studentService.getAll());
-//        } catch (JsonProcessingException e) {
-//            return "{error}";
-//        } catch (IncorrectInputException e) {
-//            return "{error: validation error}";
-//        }
-//    }
+    @RequestMapping("/student/create/{name}/{secondName}")
+    public String createStudent(@PathVariable String name,
+                                @PathVariable String secondName) {
+        try {
+            studentService.create(name, secondName);
+            return new ObjectMapper().writeValueAsString(studentService.getAll());
+        } catch (JsonProcessingException e) {
+            return "{error}";
+        } catch (IncorrectInputException e) {
+            return "{error: validation error}";
+        }
+    }
 @RequestMapping("/student/create/{name}/{secondName}/{age}")
 public String createStudent(@PathVariable String name,
                             @PathVariable String secondName,
